@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somar(){
+            const n1 = document.getElementById('n1').value;
+            const n2 = document.getElementById('n2').value;
+
+            //Verifica se os campos não estão vazios
+
+            if (n1 === '' || n2 === '') {
+                alert('Por favor, insira ambos os números.');
+                return;
+            }
+
+            const soma = Number(n1) + Number(n2);
+
+            //Exibe o resultado na página
+            document.getElementById('resultado').innerText = 'O resultado da adição é ' + soma;
+
+        }
+
+    </script>
+
+
+<form>
+    N1: <input type="text" id="n1"><br>
+    N2: <input type="text" id="n2"><br>
+    <input type="button" value="Somar" onclick="somar()">
+</form>
+
+<div id="resultado"></div>
+
+</body>
+</html>
